@@ -1,0 +1,28 @@
+{
+  "extends": "nx/presets/npm.json",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "clean",
+          "build"
+        ]
+      }
+    }
+  },
+  "workspaceLayout": {
+    "appsDir": "services",
+    "libsDir": "packages"
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": [
+        "clean"
+      ]
+    }
+  },
+  "affected": {
+    "defaultBase": "main"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base",
+    ":automergeMinor",
+    ":dependencyDashboard",
+    ":prHourlyLimitNone"
+  ],
+  "baseBranches": [
+    "main"
+  ],
+  "labels": [
+    "✅ Renovate"
+  ],
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "commitMessagePrefix": "[RENOVATE] ",
+  "prConcurrentLimit": 10,
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "vulnerabilityAlerts": {
+    "labels": [
+      "✅ Renovate",
+      "🔐 Security"
+    ],
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "extends": "monorepo:nrwl",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ],
+      "groupName": "nrwl monorepo"
+    },
+    {
+      "matchPackageNames": [
+        "react, react-dom"
+      ],
+      "prPriority": 5
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "labels": [
+        "✅ Renovate",
+        "🛠 Dev"
+      ],
+      "prPriority": -1
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "✅ Renovate",
+        "🚨 UPDATE-MAJOR"
+      ]
+    },
+    {
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "labels": [
+        "✅ Renovate",
+        "💅 Linting"
+      ]
+    },
+    {
+      "matchDepTypes": [
+        "optionalDependencies"
+      ],
+      "addLabels": [
+        "✅ Renovate",
+        "🧹 Optional"
+      ]
+    }
+  ]
+}

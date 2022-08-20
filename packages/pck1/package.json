@@ -1,0 +1,14 @@
+{
+  "name": "@example/pck1",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "tsc --build"
+  },
+  "devDependencies": {
+    "@types/node": "*",
+    "rimraf": "*",
+    "typescript": "*"
+  }
+}
