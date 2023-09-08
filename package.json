@@ -17,7 +17,7 @@
     "build": "nx run-many --target=build --all"
   },
   "dependencies": {
-    "nx": "14.5.5"
+    "nx": "14.8.9"
   },
   "packageManager": "pnpm@7.9.3",
   "engines": {
@@ -37,8 +37,8 @@
     "rimraf": "3.0.2",
     "ts-jest": "28.0.8",
     "ts-node": "10.9.1",
-    "nx": "14.5.5",
-    "@nrwl/eslint-plugin-nx": "14.5.5"
+    "nx": "14.8.9",
+    "@nrwl/eslint-plugin-nx": "14.8.9"
   },
   "pnpm": {
     "overrides": {
